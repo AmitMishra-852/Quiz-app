@@ -1,0 +1,95 @@
+.QuizComp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.Questions{
+    width: fit-content;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #ffcef3 ;
+    border-radius: 10px;
+}
+
+.question{
+    width: fit-content;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.Answers{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.option{
+    width: 40%;
+    margin:10px;
+    padding: 10px;
+    background-color:#ffcef3 ;
+    border: 1px solid #e7b3b3;
+    border-radius:10px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.option:hover ,
+.option.active {
+    background-color:#e7b3b3 ; 
+}
+
+.option.correct{
+    animation:correct 3s ease forwards ;
+}
+
+@keyframes correct {
+    0%,20%,42%{
+        background-color:#e7b3b3 ;
+    }
+    15%,35%,52%{
+        background-color:#ffcef3 ;
+    }
+    65%,100%{
+        background-color:#17b978 ;
+    }
+    
+}
+
+.option.wrong{
+    animation:wrong 3s ease forwards ;
+}
+
+@keyframes wrong {
+    0%,20%,42%{
+        background-color:#e7b3b3 ;
+    }
+    15%,35%,52%{
+        background-color:#ffcef3 ;
+    }
+    65%,100%{
+        background-color:#fc5185 ;
+    }
+    
+}
+@media(max-width:420px){
+    .option{
+        width: 80%;
+    }
+     
+}
+
+
+
+
+    
+
+
